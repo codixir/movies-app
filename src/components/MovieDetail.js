@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import useSearchStore from '../store/useSearchStore';
 import { useEffect } from "react";
+import './MovieDetail.css';
 
 const MovieDetail = () => {
     const { id } = useParams()
