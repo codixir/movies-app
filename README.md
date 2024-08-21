@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# Movie App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based movie browsing application that lets users explore and view detailed information about movies using data from the OMDB API.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Browse movies on the homepage.
+- View detailed information about a selected movie.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React
+- React Router
+- OMDB API
+- Vercel (for deployment)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js
+- npm (Node Package Manager)
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Install Node.js and npm:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   - **MacOS:**
+     ```bash
+     brew install node
+     ```
+   - **Windows:**
+     [Download Node.js](https://nodejs.org/) and follow the installation steps.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   - **Verify Installation:**
+     ```bash
+     node -v
+     npm -v
+     ```
 
-### `npm run eject`
+2. **Clone the repository:**
+   ```bash
+   git clone <repository-url>
+   cd <repository-directory>
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Obtain an OMDB API key:**
+   - Sign up at [OMDB](http://www.omdbapi.com/apikey.aspx).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5. **Set up environment variables:**
+   - Create a `.env` file in the root directory:
+     ```properties
+     REACT_APP_OMDB_API_KEY=your_api_key_here
+     ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Running the App
 
-## Learn More
+Start the development server:
+```bash
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Access the app at [http://localhost:3000](http://localhost:3000).
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. **Sign up for [Vercel](https://vercel.com/).**
 
-### `npm run build` fails to minify
+2. **Install the Vercel CLI:**
+   ```bash
+   npm install -g vercel
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3. **Deploy the app:**
+   ```bash
+   vercel
+   ```
+
+4. **Configure environment variables on Vercel:**
+   - In your Vercel dashboard, navigate to your project’s settings and add the OMDB API key as an environment variable: `REACT_APP_OMDB_API_KEY`.
+
+## App Overview
+
+- **Home Page**: Displays a list of movies fetched from the OMDB API.
+- **Movie Detail Page**: Provides detailed information about a selected movie.
+
+React Router is used to manage navigation between these pages.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Acknowledgements
+
+- [OMDB API](http://www.omdbapi.com/) for movie data
+- [Create React App](https://create-react-app.dev/) for project setup
+
+Contributions via issues or pull requests are welcome!
