@@ -6,7 +6,6 @@ const HomePage = () => {
     return (
         <div className="home-page">
             <SearchBar />
-
             <MovieList />
         </div>
     )
